@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: motinf
+Version: 0.1.0
+Summary: Analysis pipeline for motivated precision paper
+License-File: LICENSE
+Dynamic: license-file

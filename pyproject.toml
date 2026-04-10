@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "motinf"
+version = "0.1.0"
+description = "Analysis pipeline for motivated precision paper"
+
+[tool.setuptools.packages.find]
+where = ["src"]

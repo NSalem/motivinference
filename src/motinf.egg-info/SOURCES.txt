@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/motinf.egg-info/PKG-INFO
+src/motinf.egg-info/SOURCES.txt
+src/motinf.egg-info/dependency_links.txt
+src/motinf.egg-info/top_level.txt
+src/motinf/prereg/__init__.py
+src/motinf/prereg/aggregation.py
+src/motinf/prereg/behavior.py
+src/motinf/prereg/cleaning.py
+src/motinf/prereg/cleaning_core.py
+src/motinf/prereg/model.py
+src/motinf/prereg/stats.py
