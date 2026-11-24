@@ -1,0 +1,8 @@
+panel,file,description
+a,,"schematic; the scatter plots are simulated with rho set to the mean at neutral (Stimulus Reproduction 0.427, Sequence Categorization 0.345)"
+b,fig4b_noise.csv,"Stimulus Reproduction: noise SD (°) per participant and condition, and the change of its log from neutral"
+b,fig4b_bias.csv,"Stimulus Reproduction: bias SD (°) per participant and condition, and the change of its log from neutral"
+b,fig4b_variance_shares.csv,"Stimulus Reproduction: noise and bias variance per condition as a share of the total at neutral (mean, 95% bootstrap CI)"
+c,fig4c_noise.csv,"Sequence Categorization: noise SD (log LR) per participant and condition, and the change of its log from neutral"
+c,fig4c_bias.csv,"Sequence Categorization: bias SD (log LR) per participant and condition, and the change of its log from neutral"
+c,fig4c_variance_shares.csv,"Sequence Categorization: noise and bias variance per condition as a share of the total at neutral (mean, 95% bootstrap CI)"

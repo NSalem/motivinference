@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Outputs are checked byte for byte against checks/expected_outputs.sha256: never convert their line endings.
+results/** -text
+plots/** -text
+checks/*.sha256 -text
+checks/*.csv -text

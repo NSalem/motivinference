@@ -1,0 +1,5 @@
+panel,file,description
+a,sfig4a.csv,"group Bayesian model selection among the single-modulation models, both experiments pooled (N = 216): estimated frequencies (frequency_mean, drawn) and PXP"
+b,sfig4b.csv,model recovery: % of 20 simulations in which each generative model (rows) was recovered (columns)
+c,sfig4c.csv,mean absolute error of each model's predicted incentive effect: mean and s.e.m. over participants (N = 163)
+d,sfig4d.csv,"reduction of choice variability (neutral − incentive) per sequence length: data and each model's prediction, mean and s.e.m. over participants"

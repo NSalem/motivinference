@@ -1,0 +1,3 @@
+panel,file,description
+,sfig5_matrix.csv,"Pearson correlation between generative and recovered parameters over 216 simulated datasets, with its s.e.m. over 2,000 bootstrap resamples"
+,sfig5_runs.csv,generative and recovered parameters of each simulated dataset

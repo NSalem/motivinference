@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Kept by run_pipeline.py: the recorded outputs, before a run overwrites them (checks/output_manifest.py)
+build/
+
+# The data bundle (data/README.md), unpacked at the repository root: everything it adds.
+data/raw/
+data/interim/
+data/processed/
+*.npz
+DATA_BUNDLE_MANIFEST.sha256
+DATA_BUNDLE_README.md
+DATA_BUNDLE_LICENSE.txt

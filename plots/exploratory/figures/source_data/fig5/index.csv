@@ -1,0 +1,11 @@
+panel,file,description
+a,fig5a_estim.csv,"Stimulus Reproduction: median response time (s) per participant and condition, and its change from neutral (s; drawn in ms)"
+a,fig5a_inf.csv,"Sequence Categorization: median response time (s) per participant and condition, and its change from neutral (s; drawn in ms)"
+b,fig5b_bins.csv,"binned data: mean log response time (m, s.e.m. se) per bin of evidence toward the choice (x), per sequence length and condition (drawn as exp(m))"
+b,fig5b_fits.csv,"linear fits of log response time on evidence (mean and s.e.m. band, in s)"
+b,fig5b_coefficients.csv,"per participant, sequence length and condition: intercept and slope of the fits"
+b,fig5b_bars.csv,"bars on the right: intercept (s) and slope (mean ± s.e.m.) and their differences from neutral (intercept in ms), with the p values of the stars"
+c,fig5c_estim_fast_minus_slow.csv,"Stimulus Reproduction: noise (log error SD), fast − slow trials, per participant and condition"
+c,fig5c_estim_incentive_effect.csv,"Stimulus Reproduction: change of the fast − slow difference with incentives, per participant"
+c,fig5c_inf_fast_minus_slow.csv,"Sequence Categorization: noise (log inference noise), fast − slow trials, per participant and condition"
+c,fig5c_inf_incentive_effect.csv,"Sequence Categorization: change of the fast − slow difference with incentives, per participant"

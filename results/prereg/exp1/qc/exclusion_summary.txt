@@ -1,0 +1,8 @@
+Exclusion summary for exp1
+------------------------------------------------
+Trials removed (categorization): 14221 / 86400
+Trials removed (estimation):     2355 / 14400
+Trials removed (total):          16576 / 100800
+
+Participants removed: 16
+Participant IDs: S011, S030, S036, S045, S049, S054, S056, S059, S060, S062, S063, S065, S085, S088, S091, S096

@@ -4,8 +4,25 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "motinf"
-version = "0.1.0"
-description = "Analysis pipeline for motivated precision paper"
+version = "1.0.0"
+description = "Analysis code for \"Incentives buy precision in human inferences\" (Salem-Garcia, Lebreton, Wyart)"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+# Exact versions used for the paper: environment.yml
+dependencies = [
+    "numpy>=2,<2.4",  # PyVBMC 1.0.4 fails under NumPy 2.4 (see environment.yml)
+    "scipy",
+    "pandas>=2",
+    "statsmodels",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "pingouin>=0.6,<0.7",
+    "threadpoolctl",
+    "pybads",
+    "pyvbmc",
+    "groupBMC==1.0",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

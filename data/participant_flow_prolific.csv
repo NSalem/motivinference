@@ -1,0 +1,11 @@
+experiment,step,n,note
+exp1,session1_not_completed,13,"returned in session 1 and replaced"
+exp1,session1_failed_attention_check,0,"rejected for failing the attention check of session 1"
+exp1,session1_completed,106,"approved session-1 submissions"
+exp1,session2_not_completed,4,"invited to session 2 but did not complete it (2 never started, 1 returned, 1 rejected)"
+exp1,both_sessions_completed,102,"approved session-2 submissions"
+exp2,session1_not_completed,21,"returned (19) or timed out (2) in session 1 and replaced"
+exp2,session1_failed_attention_check,1,"rejected for failing the attention check of session 1 (completion code of the failed check)"
+exp2,session1_completed,157,"approved or awaiting review in session 1, over the three recruitment waves"
+exp2,session2_not_completed,1,"invited to session 2 but did not complete it"
+exp2,both_sessions_completed,156,"completed session 2"

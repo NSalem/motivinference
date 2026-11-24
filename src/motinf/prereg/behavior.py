@@ -9,6 +9,7 @@ import pandas as pd
 import pingouin as pg
 from scipy.stats import circstd
 
+from .rm_anova_exact import rm_anova_exact
 from .stats import fit_slopes_intercepts, probit_sigma2
 
 
@@ -90,6 +91,20 @@ def _paired_abs_ttest(df: pd.DataFrame, dv: str, alternative: str = "two-sided")
     return t
 
 
+def _add_exact_gg(table: pd.DataFrame, data: pd.DataFrame, dv: str, within: list[str]) -> pd.DataFrame:
+    """Deviation 2 (PREREG_DEVIATIONS.md): exact Greenhouse-Geisser epsilon and GG-corrected p of every effect.
+
+    Added in place next to pingouin's columns (``eps_exact``, ``p_GG_exact``), so the pre-registered values stay
+    visible and attributes such as ``post_hoc`` are kept. Returns the full exact table, labelled with ``dv``.
+    """
+    exact = rm_anova_exact(data, dv, within)
+    by_source = exact.set_index("Source")
+    table["eps_exact"] = table["Source"].map(by_source["eps"])
+    table["p_GG_exact"] = table["Source"].map(by_source["p_GG_corr"])
+    exact.insert(0, "dv", dv)
+    return exact
+
+
 def _run_analyses(df_m: pd.DataFrame, df_m_len: pd.DataFrame) -> dict[str, pd.DataFrame]:
     df_m = df_m.copy()
     df_m_len = df_m_len.copy()
@@ -97,10 +112,12 @@ def _run_analyses(df_m: pd.DataFrame, df_m_len: pd.DataFrame) -> dict[str, pd.Da
     df_m_len["incentive_abs"] = df_m_len["incentive"].abs()
 
     analyses: dict[str, pd.DataFrame] = {}
+    exact: list[pd.DataFrame] = []
 
     # rmANOVA of sensitivity on incentives (+post-hoc)
     a_sens = pg.rm_anova(data=df_m, dv="sensitivity", within=["incentive"], subject="participant", detailed=True, effsize="np2")
     a_sens.post_hoc = pg.pairwise_tests(dv="sensitivity", within=["incentive"], subject="participant", data=df_m, padjust="holm", effsize="cohen")
+    exact.append(_add_exact_gg(a_sens, df_m, "sensitivity", ["incentive"]))
     analyses["rm_anova_sensitivity_incentive"] = a_sens
 
     # one-way t-test of sensitivity on abs incentive (greater for 1 vs 0)
@@ -109,14 +126,19 @@ def _run_analyses(df_m: pd.DataFrame, df_m_len: pd.DataFrame) -> dict[str, pd.Da
 
     # rmANOVA of log(choice_var) on seqlen x incentive (+post-hoc pairwise incentive, Holm)
     a_cv = pg.rm_anova(data=df_m_len, dv="choice_var_log", within=["seqlen", "incentive"], subject="participant", detailed=True, effsize="np2")
+    exact.append(_add_exact_gg(a_cv, df_m_len, "choice_var_log", ["seqlen", "incentive"]))
     analyses["rm_anova_choice_var_log_seqlen_x_incentive"] = a_cv
     # rmANOVA of sd_estim on incentives (+post-hoc)
     a_estim_sd = pg.rm_anova(data=df_m, dv="estim_sd", within=["incentive"], subject="participant", detailed=True, effsize="np2")
     a_estim_sd.post_hoc = pg.pairwise_tests(dv="estim_sd", within=["incentive"], subject="participant", data=df_m, padjust="holm", effsize="cohen")
+    exact.append(_add_exact_gg(a_estim_sd, df_m, "estim_sd", ["incentive"]))
     analyses["rm_anova_estim_sd_incentive"] = a_estim_sd
 
     # paired t-test on estim_sd: abs incentive 1 vs 0 (alternative='less')
     analyses["ttest_estim_sd_abs_1_vs_0"] = _paired_abs_ttest(df_m, dv="estim_sd", alternative="less")
+
+    # Deviation 2: the three ANOVAs with the exact GG epsilon of every effect (the p values reported in the paper)
+    analyses["rm_anova_exact_gg"] = pd.concat(exact, ignore_index=True)
     return analyses
 
 
@@ -146,6 +168,7 @@ def run_behavior_main_prereg(exp_name: str = "exp1") -> None:
     df_var_slopes.to_csv(results_dir / "behav_var_slopes.csv", index=False)
 
     analyses = _run_analyses(df_m, df_m_len)
+    analyses["rm_anova_exact_gg"].to_csv(results_dir / "rm_anova_exact_gg.csv", index=False)  # deviation 2
     md_parts = ["# Behavioral statistics (prereg)\n"]
     for key, tbl in analyses.items():
         md_parts.append(f"## {key}\n")

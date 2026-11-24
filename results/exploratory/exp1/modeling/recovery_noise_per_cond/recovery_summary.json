@@ -1,0 +1,11 @@
+{
+  "npz_path": "results/prereg/exp1/model_fit/fit_noise_per_cond.npz",
+  "max_ntrials": 0,
+  "max_nsess": 0,
+  "subsample_trials": 0,
+  "n_rows": 252,
+  "n_ok": 252,
+  "mae_sd_inf": 0.10203272754742902,
+  "rmse_sd_inf": 0.1780614603438733,
+  "corr_true_fit": 0.9580852077198223
+}

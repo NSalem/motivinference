@@ -1,0 +1,5 @@
+experiment,task,n_participants,n_trials,n_trials_removed,pct_removed
+exp1,integration,84,72576,397,0.54701278659612
+exp1,estimation,84,12096,51,0.42162698412698413
+exp2,integration,132,114048,217,0.19027076318742986
+exp2,estimation,132,19008,51,0.26830808080808083

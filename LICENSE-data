@@ -1,0 +1,16 @@
+Data licence
+
+The data and results in this repository (the files under data/ and results/, and the figures under plots/) are
+licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Copyright (c) 2026 Nahuel Salem-Garcia, Maël Lebreton and Valentin Wyart
+
+You may share and adapt them for any purpose, provided you give appropriate credit (cite the data record,
+https://doi.org/10.5281/zenodo.24503922), link to the licence and indicate if changes were made.
+
+The code (everything else, including src/, scripts/, checks/, tests/ and run_pipeline.py) is licensed under the MIT
+licence (LICENSE). The full data bundle, archived separately on Zenodo (https://doi.org/10.5281/zenodo.24503922), is
+licensed under CC BY 4.0 as well.
+
+Versions up to and including the pre-registration tag `prereg` were released under CC0 1.0 and remain so.

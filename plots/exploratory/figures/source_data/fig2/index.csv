@@ -1,0 +1,7 @@
+panel,file,description
+a,,model schematic with illustrative simulated values (no data)
+b,fig2b.csv,"group Bayesian model selection among the single-noise models per condition: estimated model frequencies (frequency_mean, drawn) and protected exceedance probabilities"
+c,fig2c.csv,"inference noise of the inference-only model per participant and condition, and the change of its log from neutral"
+d,fig2d_levels.csv,"choice variability per condition and sequence length: data and inference-only model, mean and s.e.m. over participants (N = 163)"
+d,fig2d_reduction.csv,"reduction of choice variability (neutral − incentive): data and model, mean and s.e.m. (N = 163)"
+d,fig2d_participants.csv,"per participant, condition and sequence length: the values summarised above"

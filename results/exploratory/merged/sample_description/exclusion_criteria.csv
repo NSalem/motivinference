@@ -1,0 +1,25 @@
+experiment,criterion,flags,n_participants
+exp1,RT out of range or missed on >= 20% of trials (either task),fail_slowfast_anytask | fail_slowfast_anytask_estim,0
+exp1,RT SD < 0.1 s (either task),fail_rt_sd_low | fail_rt_sd_low_estim,0
+exp1,Stimulus Reproduction: error SD > 30 deg,fail_sd_dev_noisy_gt_thresh,0
+exp1,Stimulus Reproduction: response SD < 10 deg,fail_sd_resp_low,0
+exp1,Stimulus Reproduction: mean error > 4 robust SD,fail_bias_estim,0
+exp1,Stimulus Reproduction: log error SD > 4 robust SD,fail_noise_estim,0
+exp1,Sequence Categorization: accuracy above the ideal observer,fail_above_opt_any_inc_binom,7
+exp1,Sequence Categorization: not above chance on the 10% strongest trials,fail_easy_top_not_above_chance,1
+exp1,Sequence Categorization: psychometric slope <= 0,fail_slope_leq_0,0
+exp1,Sequence Categorization: same category on >= 90% of trials,fail_same_dir,0
+exp1,Sequence Categorization: probit bias > 4 robust SD,fail_bias_any_inc,7
+exp1,Sequence Categorization: probit noise > 4 robust SD,fail_noise_any_inc,4
+exp2,RT out of range or missed on >= 20% of trials (either task),fail_slowfast_anytask | fail_slowfast_anytask_estim,0
+exp2,RT SD < 0.1 s (either task),fail_rt_sd_low | fail_rt_sd_low_estim,0
+exp2,Stimulus Reproduction: error SD > 30 deg,fail_sd_dev_noisy_gt_thresh,2
+exp2,Stimulus Reproduction: response SD < 10 deg,fail_sd_resp_low,0
+exp2,Stimulus Reproduction: mean error > 4 robust SD,fail_bias_estim,3
+exp2,Stimulus Reproduction: log error SD > 4 robust SD,fail_noise_estim,0
+exp2,Sequence Categorization: accuracy above the ideal observer,fail_above_opt_any_inc_binom,0
+exp2,Sequence Categorization: not above chance on the 10% strongest trials,fail_easy_top_not_above_chance,5
+exp2,Sequence Categorization: psychometric slope <= 0,fail_slope_leq_0,3
+exp2,Sequence Categorization: same category on >= 90% of trials,fail_same_dir,0
+exp2,Sequence Categorization: probit bias > 4 robust SD,fail_bias_any_inc,13
+exp2,Sequence Categorization: probit noise > 4 robust SD,fail_noise_any_inc,3

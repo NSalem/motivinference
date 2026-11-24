@@ -1,0 +1,73 @@
+# The environment of the whole pipeline (run_pipeline.py, every stage): the frozen pre-registered cleaning, the model
+# fits and simulation studies, every statistic and every figure. It installs the motinf package (pip install -e .).
+# Create with:   conda env create -f environment.yml   then   conda activate motinf
+#
+# The conda-forge builds of the authors' environment for the fits, with pingouin 0.6.1 for the statistics. In it
+# (checked 2026-11-20 to 24): the cleaning reproduces data/interim/, data/processed/ and results/prereg/<exp>/qc/ byte
+# for byte; the model fits reproduce the bundled ones bit for bit (the pre-registered ones on a machine with at least 10
+# CPUs: data/README.md); the statistics and figures reproduce the recorded outputs (checks/expected_outputs.sha256)
+# byte for byte on the authors' machine (figure bytes also depend on the fonts).
+#
+# Version constraints that matter:
+# - NumPy and SciPy from conda (not pip), linking OpenBLAS 0.3.21 as the original environment: the pip wheels bundle
+#   a newer OpenBLAS, which changes the cleaning's QC table in the last digit (~1e-15); other NumPy and SciPy builds
+#   also move the optimisers' paths (BADS, VBMC) slightly.
+# - NumPy < 2.4: PyVBMC 1.0.4 assigns a 1-element array to an array element (_eval_full_elcbo), an error since NumPy
+#   2.4; the full-model fits and recoveries then crash.
+# - pandas 2: with pandas 3 the frozen cleaning skips every raw file.
+# - pingouin 0.6.x: its column names and corrections are what the statistics code expects; the frozen code's
+#   statistics run with it too (PREREG_DEVIATIONS.md).
+# Dependencies of dependencies that change numbers or output files are pinned too: gpyreg and cma (BADS), the pip
+# packages under PyVBMC, ArviZ and xarray (imported by PyVBMC through corner), patsy and pandas-flavor (statistics),
+# FreeType, fontTools and Pillow (PDF/PNG bytes) and matplotlib's other dependencies.
+name: motinf
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11.8
+  - numpy=2.2.6
+  - scipy=1.15.2
+  - libopenblas=0.3.21
+  - libblas=3.9.0=*openblas
+  - pandas=2.2.3
+  - statsmodels=0.14.4=py311h9f3472d_0
+  - patsy=1.0.1
+  - matplotlib-base=3.10.3
+  - freetype=2.13.3
+  - libpng=1.6.47
+  - pillow=11.0.0
+  - fonttools=4.51.0
+  - kiwisolver=1.4.4
+  - contourpy=1.3.0
+  - cycler=0.11.0
+  - pyparsing=3.1.2
+  - python-dateutil=2.9.0
+  - pytz=2024.1
+  - tzdata=2024b
+  - pingouin=0.6.1
+  - scikit-learn=1.6.1
+  - joblib=1.5.1
+  - seaborn=0.13.2
+  - pandas-flavor=0.7.0
+  - tabulate=0.9.0
+  - threadpoolctl=3.5.0
+  - pybads=1.0.5
+  - gpyreg=1.0.2
+  - cma=4.0.0
+  - arviz=0.23.4
+  - xarray=2026.9.0
+  - pip
+  - pip:
+      - groupBMC==1.0  # PyPI wheel; same code as github.com/cpilab/group-bayesian-model-comparison@d216c68 (not pip-installable)
+      # PyVBMC and its pure-Python dependencies, at the versions of the original environment.
+      - pyvbmc==1.0.4
+      - corner==2.2.2
+      - dill==0.3.9
+      - imageio==2.36.0
+      - plotly==5.24.1
+      - tenacity==9.0.0
+      - pytest==8.3.3
+      - pytest-mock==3.14.0
+      - pytest-rerunfailures==14.0
+      - -e .

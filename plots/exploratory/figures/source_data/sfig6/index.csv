@@ -1,0 +1,7 @@
+panel,file,description
+a,sfig6a_participants.csv,"per participant: full-model parameters, choice-variability midpoint and slope (data) and the same predicted by the model (*_mod)"
+a,sfig6a_correlations.csv,"Pearson r of the data (with p) and R² of the data around the model's line, per plot"
+b,sfig6b.csv,"standardized coefficients (± SE, p) of robust linear models with all three parameters, fitted to the data and to the model's predictions"
+c,sfig6c_participants.csv,"per participant: full-model parameters, choice-variability midpoint and slope (data) and the same predicted by the model (*_mod)"
+c,sfig6c_correlations.csv,"Pearson r of the data (with p) and R² of the data around the model's line, per plot"
+d,sfig6d.csv,"standardized coefficients (± SE, p) of robust linear models with all three parameters, fitted to the data and to the model's predictions"

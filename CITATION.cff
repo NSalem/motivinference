@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite this software release."
+title: "Analysis code for: Incentives buy precision in human inferences"
+type: software
+version: 1.0.0
+license: MIT  # code; the data and results are CC BY 4.0 (LICENSE-data)
+repository-code: "https://github.com/NSalem/motivinference"
+authors:
+  - family-names: Salem-Garcia
+    given-names: Nahuel
+    affiliation: "Paris School of Economics; LNC2, École Normale Supérieure"
+references:
+  - type: data
+    title: "Data for: Incentives buy precision in human inferences"
+    doi: 10.5281/zenodo.24503922
+    authors:
+      - family-names: Salem-Garcia
+        given-names: Nahuel
+      - family-names: Lebreton
+        given-names: Maël
+      - family-names: Wyart
+        given-names: Valentin

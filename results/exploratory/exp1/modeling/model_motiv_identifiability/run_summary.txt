@@ -1,0 +1,26 @@
+Model identifiability (pooled categorization, motiv-space, no estimation task)
+exp_name: exp1
+data_inf: data/processed/exp1/data_clean_inf.csv
+n_reps: 20
+seed: 42
+bads_nit: 5
+max_nsubs: 0
+max_ntrials: 0
+max_nsess: 0
+use_priors: False
+generation: sd_* from priors_categ; active motiv_* ~ N(motiv_mean, motiv_sd)
+motiv_mean: 0.1
+motiv_sd: 0.3
+likelihood_mapping: sd_*_v = sd_* * exp(-motiv_*) for the channel's motiv (implicit sd_*_v)
+models: ['ang_motiv', 'inf_motiv', 'sel_motiv']
+
+total_replicates: 60
+valid_replicates: 60
+invalid_replicates: 0
+fit_fail_count: 0
+skip_participant_count: 0
+
+Row sums of confusion percent:
+  ang_motiv: 100.00
+  inf_motiv: 100.00
+  sel_motiv: 100.00

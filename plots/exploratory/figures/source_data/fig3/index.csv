@@ -1,0 +1,6 @@
+panel,file,description
+a,fig3a.csv,"full model per participant: noise of each source at neutral (sd_*) and with an incentive (sd_*_v), and the incentive effects (motiv_* = log sd_* − log sd_*_v)"
+b,fig3b.csv,"predicted choice variance per source as a share of the total at neutral, at neutral and with an incentive (mean and s.e.m. over participants), and each source's share of the incentive effect"
+c,fig3c_summary.csv,"reduction of choice variability (neutral − incentive) per sequence length: contribution of each incentive effect (stacked in the figure) and data, mean and s.e.m. over participants (N = 163)"
+c,fig3c_participants.csv,per participant and sequence length: observed and predicted reductions (model_id)
+d,fig3d.csv,"mean absolute error of the predicted incentive effect, full model and models without one incentive effect (knockouts): mean and s.e.m. over participants"

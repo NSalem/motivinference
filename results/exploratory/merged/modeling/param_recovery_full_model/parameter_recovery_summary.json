@@ -1,0 +1,67 @@
+{
+  "model_name": "fixed_ang_from_estim",
+  "generative_parnames": [
+    "sd_ang",
+    "sd_inf",
+    "sd_sel",
+    "motiv_ang",
+    "motiv_inf",
+    "motiv_sel"
+  ],
+  "fit_free_parnames": [
+    "sd_inf",
+    "sd_sel",
+    "motiv_inf",
+    "motiv_sel"
+  ],
+  "fixed_from_estim": [
+    "sd_ang",
+    "motiv_ang"
+  ],
+  "exp_name": "merged",
+  "seed": 42,
+  "n_reps": 1,
+  "bads_nit": 10,
+  "vbmc_after_bads": true,
+  "max_nsubs": 0,
+  "max_ntrials": 0,
+  "max_nsess": 0,
+  "use_priors_fit": true,
+  "n_rows": 216,
+  "n_ok": 216,
+  "n_fail": 0,
+  "per_param": {
+    "sd_inf": {
+      "n": 216,
+      "mae": 0.30929933364091816,
+      "rmse": 0.4769693993796604,
+      "bias_mean": 0.07421369284072943,
+      "pearson_r": 0.6848316804331815,
+      "spearman_r": 0.7093147046226358
+    },
+    "sd_sel": {
+      "n": 216,
+      "mae": 0.8731268848559576,
+      "rmse": 1.3548438867964228,
+      "bias_mean": -0.24159247170337161,
+      "pearson_r": 0.7612846808044753,
+      "spearman_r": 0.7478330352708424
+    },
+    "motiv_inf": {
+      "n": 216,
+      "mae": 0.28051163919022204,
+      "rmse": 0.37860646795477504,
+      "bias_mean": -0.0445340221111592,
+      "pearson_r": 0.6717063011879724,
+      "spearman_r": 0.6847174641833501
+    },
+    "motiv_sel": {
+      "n": 216,
+      "mae": 0.34821181459358996,
+      "rmse": 0.45585194585398486,
+      "bias_mean": -0.01526663384315845,
+      "pearson_r": 0.6048922076026723,
+      "spearman_r": 0.6079457567016997
+    }
+  }
+}

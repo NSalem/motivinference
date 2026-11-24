@@ -1,0 +1,15 @@
+Experiment 1
+  Session 1: 13 did not complete it and 0 failed the attention check (both replaced); 106 completed it.
+  Session 2: 4 did not complete it; 102 completed both sessions.
+  Trial files: 104 participants, 100 with both sessions, 2 with session 1 only, 2 with session 2 only; 2 with a session saved twice. Of the 102 who completed both sessions, 2 lack the file of one session.
+  Quality checks: 16 of 100 excluded (16.0%), N = 84.
+  Criteria failed (a participant can fail several): Sequence Categorization: accuracy above the ideal observer: 7; Sequence Categorization: not above chance on the 10% strongest trials: 1; Sequence Categorization: probit bias > 4 robust SD: 7; Sequence Categorization: probit noise > 4 robust SD: 4.
+  Final sample: 84 participants (58 male, 26 female; mean age = 33.43 years, SD = 12.87, range = 18–71).
+
+Experiment 2
+  Session 1: 21 did not complete it and 1 failed the attention check (both replaced); 157 completed it.
+  Session 2: 1 did not complete it; 156 completed both sessions.
+  Trial files: 157 participants, 148 with both sessions, 8 with session 1 only, 1 with session 2 only; 0 with a session saved twice. Of the 156 who completed both sessions, 8 lack the file of one session.
+  Quality checks: 16 of 148 excluded (10.8%), N = 132.
+  Criteria failed (a participant can fail several): Stimulus Reproduction: error SD > 30 deg: 2; Stimulus Reproduction: mean error > 4 robust SD: 3; Sequence Categorization: not above chance on the 10% strongest trials: 5; Sequence Categorization: psychometric slope <= 0: 3; Sequence Categorization: probit bias > 4 robust SD: 13; Sequence Categorization: probit noise > 4 robust SD: 3.
+  Final sample: 132 participants (83 male, 49 female; mean age = 29.61 years, SD = 9.12, range = 18–67).

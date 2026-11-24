@@ -1,0 +1,10 @@
+panel,file,description
+a,sfig7a_cardinal_curves.csv,"cardinal bias: clockwise bias (deg) against the stimulus orientation (angle, deg) per condition, mean and s.e.m. over participants"
+a,sfig7a_cardinal_mean_abs_bias.csv,"cardinal bias: mean absolute bias (deg) per participant and condition, and its change from neutral"
+a,sfig7a_serial_curves.csv,"serial bias: clockwise bias (deg) against the current − previous orientation (angle, deg) per condition, mean and s.e.m. over participants"
+a,sfig7a_serial_mean_abs_bias.csv,"serial bias: mean absolute bias (deg) per participant and condition, and its change from neutral"
+b,sfig7b.csv,"evidence weight per sample position (counted from the end of the sequence) and condition, mean and s.e.m. over participants"
+c,sfig7c_b_0.csv,"choice-history probit coefficient (category preference) per participant and condition, and its change from neutral (drawn on the right as mean ± 95% CI)"
+c,sfig7c_b_prev_stim.csv,"choice-history probit coefficient (previous category) per participant and condition, and its change from neutral (drawn on the right as mean ± 95% CI)"
+c,sfig7c_b_prev_resp.csv,"choice-history probit coefficient (previous choice) per participant and condition, and its change from neutral (drawn on the right as mean ± 95% CI)"
+c,sfig7c_b_prev_key.csv,"choice-history probit coefficient (previous key) per participant and condition, and its change from neutral (drawn on the right as mean ± 95% CI)"

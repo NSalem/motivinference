@@ -1,0 +1,24 @@
+Model identifiability confusion run
+exp_name: exp1
+fit_npz: results/prereg/exp1/model_fit/fit_noise_per_cond.npz
+data_inf: data/processed/exp1/data_clean_inf.csv
+n_reps: 20
+seed: 42
+bads_nit: 5
+max_nsubs: 0
+max_ntrials: 0
+max_nsess: 0
+models_used: ['ang', 'inf', 'sel']
+models_missing_in_npz: []
+neutral_value: 0.0
+
+total_replicates: 60
+valid_replicates: 60
+invalid_replicates: 0
+fit_fail_count: 0
+skip_participant_count: 0
+
+Row sums of confusion percent (should be ~100 for rows with valid replicates):
+  ang: 100.00
+  inf: 100.00
+  sel: 100.00

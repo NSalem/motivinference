@@ -166,19 +166,25 @@ def fit_model_BADS(
     plb = np.asarray(plb, dtype=float)
     pub = np.asarray(pub, dtype=float)
     nparams = len(lb)
-    theta0 = [np.random.uniform(low=plb, high=pub) for _ in range(nit)] if x0 is None else [x0 for _ in range(nit)]
+    theta0 = [np.random.uniform(low=plb, high=pub) for _ in range(nit)] if nit >1 else [x0]
 
     results = []
     parallel_failed = False
     if nit > 1:
         try:
             with ProcessPoolExecutor(max_workers=min(nit, os.cpu_count() or 1)) as ex:
-                futs = [
-                    ex.submit(_run_bads_with_limits, theta0[i], lb, ub, plb, pub, options, parnames, data, fixedpars, priors, kappa, i)
+                futs = {
+                    ex.submit(_run_bads_with_limits, theta0[i], lb, ub, plb, pub, options, parnames, data, fixedpars, priors, kappa, i): i
                     for i in range(nit)
-                ]
+                }
                 for fut in as_completed(futs):
-                    res_i = fut.result()
+                    # A restart that raises (e.g. the PyBADS 1.0.6 `.item()` crash when the initial GP is
+                    # degenerate) is dropped; the best of the remaining restarts is kept.
+                    try:
+                        res_i = fut.result()
+                    except Exception as exc:
+                        print(f"BADS restart {futs[fut]} failed and was dropped: {type(exc).__name__}: {exc}")
+                        continue
                     results.append(res_i)
                     print(f"Results for iteration {res_i['worker_id']}: {np.round(res_i['x'], 4)}")
         except (PermissionError, OSError):
@@ -189,10 +195,16 @@ def fit_model_BADS(
     if parallel_failed:
         results = []
         for i in range(nit):
-            res_i = _run_bads_with_limits(theta0[i], lb, ub, plb, pub, options, parnames, data, fixedpars, priors, kappa, i)
+            try:
+                res_i = _run_bads_with_limits(theta0[i], lb, ub, plb, pub, options, parnames, data, fixedpars, priors, kappa, i)
+            except Exception as exc:
+                print(f"BADS restart {i} failed and was dropped: {type(exc).__name__}: {exc}")
+                continue
             results.append(res_i)
             print(f"Results for iteration {res_i['worker_id']}: {np.round(res_i['x'], 4)}")
 
+    if not results:
+        raise RuntimeError(f"All {nit} BADS restarts failed.")
     res = min(results, key=lambda r: r["fval"])
     params_final = np.asarray(res["x"], dtype=float)
     ll = get_ll(params_final, parnames, data, fixedpars, kappa=kappa)

@@ -1,0 +1,4 @@
+generative_model,ang_motiv,inf_motiv,sel_motiv
+ang_motiv,5.0,50.0,45.0
+inf_motiv,10.0,90.0,0.0
+sel_motiv,0.0,15.0,85.0

@@ -1,0 +1,4 @@
+panel,file,description
+a,sfig2a.csv,model recovery: % of 20 simulations in which each generative model (rows) was recovered (columns)
+b,sfig2b_sd_inf.csv,parameter recovery of the inference-only model: generative and recovered inference noise per simulated participant and condition
+b,sfig2b_effects.csv,"generative (gen) and recovered (fit) incentive effect on log inference noise (vs neutral), participant means over runs"

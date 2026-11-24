@@ -1,0 +1,2 @@
+test,T,dof,alternative,p_val,CI95,cohen_d,power
+log(sd_inf): abs incentive 1 vs 0,-3.203748880139509,131,less,0.000851774271869069,[ -inf -0.03],0.13353125294866913,0.45278671232547574

@@ -1,0 +1,9 @@
+panel,file,description
+a,,design schematic (no data)
+b,fig1b.csv,"payoff (GBP) as a function of the absolute reproduction error, Experiments 1 and 2 (task design)"
+c,fig1c.csv,"orientation densities (von Mises, kappa = 0.5) and evidence carried by one grating (task design)"
+d,,trial schematic (no data)
+e,fig1e.csv,"Stimulus Reproduction error SD (deg) per participant and condition, and its change from neutral"
+f,fig1f_bins.csv,proportion of choices consistent with the evidence per bin of |summed evidence|: mean and s.e.m. over participants
+f,fig1f_curves.csv,mean of the participants' probit fits
+g,fig1g.csv,"evidence sensitivity (probit slope) per participant and condition, and its change from neutral"

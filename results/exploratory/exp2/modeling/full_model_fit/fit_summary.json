@@ -1,0 +1,25 @@
+{
+  "model_name": "fixed_ang_from_estim_real",
+  "fit_free_parnames": [
+    "sd_inf",
+    "sd_sel",
+    "motiv_inf",
+    "motiv_sel"
+  ],
+  "fixed_from_estim": [
+    "sd_ang",
+    "motiv_ang"
+  ],
+  "exp_name": "exp2",
+  "seed": 42,
+  "bads_nit": 10,
+  "vbmc_after_bads": true,
+  "max_nsubs": 0,
+  "max_ntrials": 0,
+  "max_nsess": 0,
+  "cohort_n": 132,
+  "use_priors_fit": true,
+  "n_rows_csv": 132,
+  "n_ok_csv": 132,
+  "n_fail": 0
+}

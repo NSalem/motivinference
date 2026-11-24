@@ -21,6 +21,7 @@ SRC_DIR = ROOT / "src"
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
+from motinf.prereg.rm_anova_exact import rm_anova_exact  # noqa: E402  (deviation 2, PREREG_DEVIATIONS.md)
 
 
 def parse_args() -> argparse.Namespace:
@@ -289,6 +290,10 @@ def main() -> None:
             detailed=True,
             effsize="np2",
         )
+        # Deviation 2 (PREREG_DEVIATIONS.md): exact Greenhouse-Geisser epsilon and GG p, next to pingouin's values.
+        exact = rm_anova_exact(df_sd_inf, "sd_inf_log", "incentive").set_index("Source")
+        anova_sd_inf["eps_exact"] = anova_sd_inf["Source"].map(exact["eps"])
+        anova_sd_inf["p_GG_exact"] = anova_sd_inf["Source"].map(exact["p_GG_corr"])
         ttest_sd_inf = _paired_ttest_log_sd_inf_abs_1_vs_0(df_sd_inf)
         df_sd_inf.to_csv(stats_dir / "sd_inf_long.csv", index=False)
         anova_sd_inf.to_csv(stats_dir / "anova_sd_inf_incentive.csv", index=False)

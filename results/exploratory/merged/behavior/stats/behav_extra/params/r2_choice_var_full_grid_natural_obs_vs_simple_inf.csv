@@ -1,0 +1,2 @@
+contrast,contrast_description,mean_r2,median_r2,sem_r2,n_participants,pooled_r2_all_cells,n_cells_pooled,ttest_per_subj_r2_vs_0_t,ttest_per_subj_r2_vs_0_p_two_sided
+full_grid_natural,"Per participant: nine paired obs vs pred_choice_var cells at incentives -1, 0, +1 times three seqlen levels (sorted incentive then seqlen). One R2 per person.",0.40427763321758,0.6687612048838605,0.06740994453659825,163,0.7554580473891088,1467,5.997299597214316,1.2654221826315234e-08

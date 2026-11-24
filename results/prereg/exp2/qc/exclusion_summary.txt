@@ -1,0 +1,8 @@
+Exclusion summary for exp2
+------------------------------------------------
+Trials removed (categorization): 14041 / 127872
+Trials removed (estimation):     2355 / 21312
+Trials removed (total):          16396 / 149184
+
+Participants removed: 16
+Participant IDs: S012, S021, S023, S040, S045, S050, S072, S090, S102, S107, S113, S125, S132, S137, S139, S141

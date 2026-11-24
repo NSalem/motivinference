@@ -1,0 +1,3 @@
+experiment,n,n_male,n_female,n_other_or_missing,age_mean,age_sd,age_min,age_max
+exp1,84,58,26,0,33.42857142857143,12.867523061639503,18,71
+exp2,132,83,49,0,29.613636363636363,9.12228018843013,18,67

@@ -1,0 +1,29 @@
+experiment,step,n,source
+exp1,session1_not_completed,13,Prolific records
+exp1,session1_failed_attention_check,0,Prolific records
+exp1,session1_completed,106,Prolific records
+exp1,session2_not_completed,4,Prolific records
+exp1,both_sessions_completed,102,Prolific records
+exp1,participants_with_trial_files,104,trial files
+exp1,both_sessions_in_trial_files,100,trial files
+exp1,only_session1_file,2,trial files
+exp1,only_session2_file,2,trial files
+exp1,session_file_duplicated,2,trial files (the cleaning uses the earliest file)
+exp1,both_sessions_completed_but_a_file_missing,2,Prolific records - trial files
+exp1,quality_checked,100,quality checks
+exp1,excluded_by_quality_checks,16,quality checks
+exp1,final_sample,84,cleaned data
+exp2,session1_not_completed,21,Prolific records
+exp2,session1_failed_attention_check,1,Prolific records
+exp2,session1_completed,157,Prolific records
+exp2,session2_not_completed,1,Prolific records
+exp2,both_sessions_completed,156,Prolific records
+exp2,participants_with_trial_files,157,trial files
+exp2,both_sessions_in_trial_files,148,trial files
+exp2,only_session1_file,8,trial files
+exp2,only_session2_file,1,trial files
+exp2,session_file_duplicated,0,trial files (the cleaning uses the earliest file)
+exp2,both_sessions_completed_but_a_file_missing,8,Prolific records - trial files
+exp2,quality_checked,148,quality checks
+exp2,excluded_by_quality_checks,16,quality checks
+exp2,final_sample,132,cleaned data

@@ -1,0 +1,2 @@
+panel,file,description
+,sfig3.csv,"robust linear regressions of the noise parameters and their incentive effects (_l: loss, _g: gain) on each block of predictors: coefficient, SE, uncorrected p, n and weighted R² of the regression"

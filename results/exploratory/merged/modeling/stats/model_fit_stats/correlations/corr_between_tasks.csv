@@ -1,0 +1,3 @@
+test,n,r,p_raw,p_holm
+between: gain log(estim_sd) vs gain log(sd_inf),216,-0.051294859893961105,0.4532565562388111,0.9065131124776222
+between: loss log(estim_sd) vs loss log(sd_inf),216,0.015391697445246834,0.8220480723631016,0.9065131124776222
